@@ -24,13 +24,13 @@ interface PasienService {
     @GET("pasien")
     suspend fun getAllPasien(): AllPasienResponse
 
-    @GET("id_pasien")
+    @GET("id_pasien/{id_pasien}")
     suspend fun getPasienById(@Path("id_pasien") idPasien:String): Pasien
 
-    @PUT("id_pasien")
+    @PUT("id_pasien/{id_pasien}")
     suspend fun updatePasien(@Path("id_pasien") idPasien:String, @Body pasien: Pasien)
 
-    @DELETE("id_pasien")
+    @DELETE("id_pasien/{id_pasien}")
     suspend fun deletePasien(@Path("id_pasien")idPasien: String): Response<Void>
 
 //    @POST("insertpasien.php")
