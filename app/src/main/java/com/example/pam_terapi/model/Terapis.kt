@@ -17,3 +17,17 @@ data class Terapis(
     @SerialName("nomor_izin_praktik")
     val nomorIzinPraktik : String,
 )
+
+@Serializable
+data class AllTerapisResponse(
+    val status: Boolean,
+    val message: String,
+    val data: List<Pasien>
+)
+
+@Serializable
+data class TerapisDetailResponse(
+    val status: Boolean,
+    val message: String,
+    val data: Pasien
+)
