@@ -1,5 +1,6 @@
 package com.example.pam_terapi.repository
 
+import com.example.pam_terapi.model.AllPasienResponse
 import com.example.pam_terapi.model.Pasien
 import com.example.pam_terapi.service_api.PasienService
 import okio.IOException
@@ -7,7 +8,7 @@ import okio.IOException
 interface PasienRepository{
     suspend fun insertPasien(pasien: Pasien)
 
-    suspend fun getPasien(): List<Pasien>
+    suspend fun getPasien(): AllPasienResponse
 
     suspend fun updatePasien(idPasien: String, pasien: Pasien)
 
@@ -42,7 +43,7 @@ class NetworkKontakRepository(
         }
     }
 
-    override suspend fun getPasien(): List<Pasien> =
+    override suspend fun getPasien(): AllPasienResponse =
         kontakApiService.getAllPasien()
 
     override suspend fun getPasienById(idPasien: String): Pasien {

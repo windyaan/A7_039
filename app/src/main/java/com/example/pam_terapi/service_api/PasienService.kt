@@ -1,5 +1,6 @@
 package com.example.pam_terapi.service_api
 
+import com.example.pam_terapi.model.AllPasienResponse
 import com.example.pam_terapi.model.Pasien
 import retrofit2.Response
 import retrofit2.http.Body
@@ -21,7 +22,7 @@ interface PasienService {
     suspend fun insertPasien(@Body pasien: Pasien)
 
     @GET("pasien")
-    suspend fun getAllPasien(): List<Pasien>
+    suspend fun getAllPasien(): AllPasienResponse
 
     @GET("id_pasien")
     suspend fun getPasienById(@Path("id_pasien") idPasien:String): Pasien

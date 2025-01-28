@@ -52,7 +52,7 @@ import com.example.pam_terapi.R
 
 object DestinasiHome : DestinasiNavigasi {
     override val route = "home"
-    override val titleRes = "Home Mahasiswa"
+    override val titleRes = "Home Pasien"
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

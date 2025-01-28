@@ -29,7 +29,7 @@ class HomeViewModel(private val ps: PasienRepository): ViewModel() {
         viewModelScope.launch {
             psUiState = HomeUiState.Loading
             psUiState = try {
-                HomeUiState.Success(ps.getPasien())
+                HomeUiState.Success(ps.getPasien().data)
             } catch (e: IOException) {
                 HomeUiState.Error
             } catch (e: HttpException) {
