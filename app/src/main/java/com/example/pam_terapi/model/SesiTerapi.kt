@@ -21,3 +21,17 @@ data class SesiTerapi(
     @SerialName("catatan_sesi")
     val catatanSesi: String,
 )
+
+@Serializable
+data class AllSesiResponse(
+    val status: Boolean,
+    val message: String,
+    val data: List<Pasien>
+)
+
+@Serializable
+data class SesiDetailResponse(
+    val status: Boolean,
+    val message: String,
+    val data: Pasien
+)

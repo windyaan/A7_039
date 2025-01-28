@@ -14,3 +14,17 @@ data class JenisTerapi(
     @SerialName("deskripsi_terapi")
     val deskripsiTerapi : String,
 )
+
+@Serializable
+data class AllJenisResponse(
+    val status: Boolean,
+    val message: String,
+    val data: List<Pasien>
+)
+
+@Serializable
+data class JenisDetailResponse(
+    val status: Boolean,
+    val message: String,
+    val data: Pasien
+)
