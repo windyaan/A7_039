@@ -1,4 +1,4 @@
-package com.example.pam_terapi.ui.view.mahasiswa
+package com.example.pam_terapi.ui.view.pasien
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -132,7 +132,7 @@ fun HomeStatus(
         is HomeUiState.Success ->
             if (homeUiState.pasien.isEmpty()){
                 return Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center){
-                    Text(text = "Tidak ada data Mahasiswa")
+                    Text(text = "Tidak ada data Pasien")
                 }
             }else {
                 PsLayout(

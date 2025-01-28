@@ -1,4 +1,4 @@
-package com.example.pam_terapi.ui.view.mahasiswa
+package com.example.pam_terapi.ui.view.pasien
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

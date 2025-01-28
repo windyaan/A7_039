@@ -8,7 +8,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.pam_terapi.model.Pasien
 import com.example.pam_terapi.repository.PasienRepository
-import com.example.pam_terapi.ui.view.mahasiswa.DestinasiDetail
+import com.example.pam_terapi.ui.view.pasien.DestinasiDetail
 import kotlinx.coroutines.launch
 
 class DetailViewModel(
